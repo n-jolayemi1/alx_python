@@ -1,7 +1,7 @@
 word = "Holberton"
 
-print ("{}".format(word[:3]))
+print ("First 3 letters: {}\n".format (word[:3]) )
 
-print ("{}".format(word[-2:]))
+print ("Last 2 letters: {}\n".format (word[-2:]) )
 
-print ("{}".format(word[1:-1]))
+print ("Middle word: {}\n".format (word[1:-1]) )
