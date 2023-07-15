@@ -1,5 +1,5 @@
+#!/usr/bin/python3
 word = "Holberton"
-
 # WORD TO BE PRINTED CUTTING PART OF IT AND PASTING IT
 
 print("First 3 letters: {}\n".format(word[:3]))
