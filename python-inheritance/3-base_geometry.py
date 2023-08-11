@@ -20,7 +20,7 @@ class BaseGeometryMeta(type):
         return new_attributes
 
 
-class BaseGeometry(metaclass=BaseGeometryMeta):
+class BaseGeometry:
     """
     An empty class representing base geometry.
     """
