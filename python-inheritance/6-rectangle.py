@@ -35,7 +35,7 @@ class Rectangle(BaseGeometry):
     Represents a rectangle with width and height.
     """
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """ 
         Inherit a Rectangle from the Basegeometry class
 
@@ -45,7 +45,8 @@ class Rectangle(BaseGeometry):
             Raises:
                 ValueError: If width or height are not positive integers.
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+        self.integer_validator("width", self.__width)
+        self.integer_validator("height", self.__height)
+        
