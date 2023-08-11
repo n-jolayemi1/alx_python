@@ -3,6 +3,10 @@
 
 class BaseGeometry:
 
+    """ 
+    declaring a attribute that will remove the init subclass
+      """
+
     def __dir__(cls):
         # Get all the attributes, including __init_subclass__
         attributes = super().__dir__()
