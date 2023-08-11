@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 BaseGeometry = __import__('3-base_geometry').BaseGeometry
 
 bg = BaseGeometry()
 
+print(bg)
 print(dir(bg))
-print(bg.__dir__())
-# print(dir(BaseGeometry))
+print(dir(BaseGeometry))
