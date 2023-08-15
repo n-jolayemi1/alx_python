@@ -1,12 +1,12 @@
 """ creating a class
  """
 
-class BaseGeometry:
-
+class BaseGeometryMeta(type):
+    
     """ 
     declaring a attribute that will remove the init subclass
       """
-
+    
     def __dir__(cls):
         # Get all the attributes, including __init_subclass__
         attributes = super().__dir__()
@@ -17,6 +17,13 @@ class BaseGeometry:
         # Return the new list
         return new_attributes
     
+class BaseGeometry(metaclass=BaseGeometryMeta):
+
+    def __dir__(self):
+        attributes = super().__dir__()
+        new_attributes = [attr for attr in attributes if attr != '__init_subclass__']
+        return new_attributes
+
     """ 
     creating a public instance method that will raise an exception message
       """
@@ -27,6 +34,7 @@ class BaseGeometry:
 
         if not isinstance(value, int) or value <= 0:
             raise TypeError("{} must be a positive integer".format(name))
+   
         
 
 class Rectangle(BaseGeometry):
