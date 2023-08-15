@@ -23,8 +23,18 @@ creating a class that inherits from BaseGeometryMeta class that will remove the 
  """
     
 class BaseGeometry(metaclass=BaseGeometryMeta):
+
+    """ 
+    declaring a attribute that will remove the init subclass
+      """
+    
     def __dir__(self):
+        # Get all the attributes, including __init_subclass__
         attributes = super().__dir__()
+
+        # Make a new list without __init_subclass__
         new_attributes = [attr for attr in attributes if attr != '__init_subclass__']
+
+        # Return the new list
         return new_attributes
 
