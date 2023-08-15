@@ -1,3 +1,7 @@
+""" 
+creating BaseGeometryMeta class that will remove the __init_subclass from the directory
+ """
+
 class BaseGeometryMeta(type):
     
     """ 
@@ -13,6 +17,10 @@ class BaseGeometryMeta(type):
 
         # Return the new list
         return new_attributes
+    
+""" 
+creating a class that inherits from BaseGeometryMeta class that will remove the __init_subclass from the directory
+ """
     
 class BaseGeometry(metaclass=BaseGeometryMeta):
     def __dir__(self):
